@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 04:32 AM
+-- Generation Time: Nov 13, 2017 at 04:41 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `cms_f_12017_wordpress`
 --
-CREATE DATABASE IF NOT EXISTS `cms_f_12017_wordpress` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `cms_f_12017_wordpress`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +26,7 @@ USE `cms_f_12017_wordpress`;
 -- Table structure for table `wp_commentmeta`
 --
 
+DROP TABLE IF EXISTS `wp_commentmeta`;
 CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -44,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
 -- Table structure for table `wp_comments`
 --
 
+DROP TABLE IF EXISTS `wp_comments`;
 CREATE TABLE IF NOT EXISTS `wp_comments` (
   `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -73,8 +73,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
-(1, 1, 'A WordPress Commenter', 'wapuu@wordpress.example', 'https://wordpress.org/', '', '2017-11-06 03:37:14', '2017-11-06 03:37:14', 'Hi, this is a comment.\nTo get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.\nCommenter avatars come from <a href="https://gravatar.com">Gravatar</a>.', 0, 'post-trashed', '', '', 0, 0),
-(2, 142, '', '', '', '', '2017-04-12 11:41:59', '2017-04-12 11:41:59', '', 0, 'post-trashed', '', '', 0, 0);
+(1, 1, 'A WordPress Commenter', 'wapuu@wordpress.example', 'https://wordpress.org/', '', '2017-11-06 03:37:14', '2017-11-06 03:37:14', 'Hi, this is a comment.\nTo get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.\nCommenter avatars come from <a href="https://gravatar.com">Gravatar</a>.', 0, 'post-trashed', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -82,6 +81,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- Table structure for table `wp_links`
 --
 
+DROP TABLE IF EXISTS `wp_links`;
 CREATE TABLE IF NOT EXISTS `wp_links` (
   `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -106,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 -- Table structure for table `wp_options`
 --
 
+DROP TABLE IF EXISTS `wp_options`;
 CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -113,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=216 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=219 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -227,10 +228,10 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (105, 'widget_tag_cloud', 'a:2:{i:1;a:2:{s:5:"title";s:4:"Tags";s:8:"taxonomy";s:8:"post_tag";}s:12:"_multiwidget";i:1;}', 'yes'),
 (106, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(108, 'cron', 'a:8:{i:1510544239;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510544240;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510544256;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1510546951;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"686c8315be36c96dc00d0d7ed3656b43";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:6;}}}}i:1510547000;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"d63aca0b7e6237c7964320bd7fc95644";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:7;}}}}i:1510626250;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"60fda3b54003017dc64a0c492471bbfe";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:8;}}}}i:1510626309;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"d93d189209760683feef7c8d0b42e0ef";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:143;}}}}s:7:"version";i:2;}', 'yes'),
+(108, 'cron', 'a:8:{i:1510546951;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"686c8315be36c96dc00d0d7ed3656b43";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:6;}}}}i:1510547000;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"d63aca0b7e6237c7964320bd7fc95644";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:7;}}}}i:1510587439;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510587440;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510626250;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"60fda3b54003017dc64a0c492471bbfe";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:8;}}}}i:1510626309;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"d93d189209760683feef7c8d0b42e0ef";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:143;}}}}i:1510630656;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (109, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1510536139;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
-(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1510539752;}', 'no'),
-(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510539800;}', 'no'),
+(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1510544284;}', 'no'),
+(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510544284;}', 'no'),
 (119, 'can_compress_scripts', '1', 'no'),
 (126, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1510579184', 'no'),
 (127, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no'),
@@ -252,11 +253,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (176, '_transient_timeout_plugin_slugs', '1510626202', 'no'),
 (177, '_transient_plugin_slugs', 'a:4:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";i:2;s:53:"widget-importer-exporter/widget-importer-exporter.php";i:3;s:41:"wordpress-importer/wordpress-importer.php";}', 'no'),
 (178, 'recently_activated', 'a:0:{}', 'yes'),
-(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510539802;}', 'no'),
+(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510544284;}', 'no'),
 (184, 'newspaper_x_importer_finished', '1', 'yes'),
 (186, 'category_children', 'a:0:{}', 'yes'),
-(188, '_site_transient_timeout_theme_roots', '1510543964', 'no'),
-(189, '_site_transient_theme_roots', 'a:4:{s:11:"newspaper-x";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
 (190, '_transient_timeout_epsilon_plugin_information_transient_kiwi-social-share', '1510543965', 'no'),
 (191, '_transient_epsilon_plugin_information_transient_kiwi-social-share', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (192, '_transient_timeout_epsilon_plugin_information_transient_modula-best-grid-gallery', '1510543965', 'no'),
@@ -266,7 +265,6 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (196, '_transient_timeout_epsilon_plugin_information_transient_simple-custom-post-order', '1510543965', 'no'),
 (197, '_transient_epsilon_plugin_information_transient_simple-custom-post-order', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (205, 'newspaper_x_show_required_plugins', 'a:1:{s:17:"kiwi-social-share";b:0;}', 'yes'),
-(207, '_transient_is_multi_author', '1', 'yes'),
 (208, '_transient_timeout_newspaper_x_plugin_information_transient_kiwi-social-share', '1510545162', 'no'),
 (209, '_transient_newspaper_x_plugin_information_transient_kiwi-social-share', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (210, '_transient_timeout_newspaper_x_plugin_information_transient_modula-best-grid-gallery', '1510545162', 'no'),
@@ -274,7 +272,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (212, '_transient_timeout_newspaper_x_plugin_information_transient_fancybox-for-wordpress', '1510545162', 'no'),
 (213, '_transient_newspaper_x_plugin_information_transient_fancybox-for-wordpress', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (214, '_transient_timeout_newspaper_x_plugin_information_transient_simple-custom-post-order', '1510545162', 'no'),
-(215, '_transient_newspaper_x_plugin_information_transient_simple-custom-post-order', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no');
+(215, '_transient_newspaper_x_plugin_information_transient_simple-custom-post-order', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
+(217, '_site_transient_timeout_theme_roots', '1510546084', 'no'),
+(218, '_site_transient_theme_roots', 'a:4:{s:11:"newspaper-x";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no');
 
 -- --------------------------------------------------------
 
@@ -282,6 +282,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 -- Table structure for table `wp_postmeta`
 --
 
+DROP TABLE IF EXISTS `wp_postmeta`;
 CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -599,11 +600,6 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (306, 104, '_thumbnail_id', '166'),
 (307, 104, '_yoast_wpseo_content_score', '30'),
 (308, 104, '_yoast_wpseo_primary_category', '2'),
-(309, 142, '_wp_trash_meta_status', 'publish'),
-(310, 142, '_wp_trash_meta_time', '1494425155'),
-(311, 142, '_wp_desired_post_slug', 'hello-world'),
-(312, 142, '_yst_is_cornerstone', ''),
-(313, 142, '_wp_trash_meta_comments_status', 'a:1:{i:1;s:1:"1";}'),
 (314, 108, '_yst_is_cornerstone', ''),
 (315, 108, '_edit_last', '1'),
 (316, 108, '_thumbnail_id', '160'),
@@ -876,11 +872,6 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (585, 104, '_thumbnail_id', '166'),
 (586, 104, '_yoast_wpseo_content_score', '30'),
 (587, 104, '_yoast_wpseo_primary_category', '2'),
-(588, 142, '_wp_trash_meta_status', 'publish'),
-(589, 142, '_wp_trash_meta_time', '1494425155'),
-(590, 142, '_wp_desired_post_slug', 'hello-world'),
-(591, 142, '_yst_is_cornerstone', ''),
-(592, 142, '_wp_trash_meta_comments_status', 'a:1:{i:1;s:1:"1";}'),
 (593, 108, '_yst_is_cornerstone', ''),
 (594, 108, '_edit_last', '1'),
 (595, 108, '_thumbnail_id', '160'),
@@ -924,6 +915,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- Table structure for table `wp_posts`
 --
 
+DROP TABLE IF EXISTS `wp_posts`;
 CREATE TABLE IF NOT EXISTS `wp_posts` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -953,7 +945,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=169 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=170 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -1019,7 +1011,6 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (139, 1, '2017-11-13 02:24:16', '2017-11-13 02:24:16', ' ', '', '', 'publish', 'closed', 'closed', '', '139', '', '', '2017-11-13 03:17:03', '2017-11-13 03:17:03', '', 0, 'http://localhost:82/cms_f_12017/wordpress/?p=139', 2, 'nav_menu_item', '', 0),
 (140, 1, '2017-11-13 02:24:16', '2017-11-13 02:24:16', ' ', '', '', 'publish', 'closed', 'closed', '', '140', '', '', '2017-11-13 02:24:16', '2017-11-13 02:24:16', '', 0, 'http://localhost:82/cms_f_12017/wordpress/?p=140', 9, 'nav_menu_item', '', 0),
 (141, 3, '2017-05-10 14:26:44', '2017-05-10 14:26:44', 'Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque venenatis purus eget maximus. Fusce dapibus leo sed sem fringilla, nec convallis arcu egestas. Nullam ut\n\nNulla facilisi. Etiam euismod tristique ipsum, vitae fringilla orci tempor at. Cras dignissim laoreet ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae aliquet dui, sit amet cursus ante. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sodales porta lacus, eu facilisis justo. Curabitur sed leo dui.\n\nNam nisl ex, pellentesque eget lorem eget, dignissim lobortis nisi. Curabitur elit elit, condimentum non lacus sed, elementum pellentesque mi. Fusce eget accumsan elit. Integer euismod libero a tellus tincidunt venenatis. Vivamus sit amet neque id mauris lacinia consequat vel ac orci. Suspendisse posuere velit eu pellentesque vestibulum. Vestibulum sit amet nibh ut nisl luctus facilisis. Vestibulum et posuere massa, ut luctus enim. In id ex dui. Mauris elementum mauris ut mauris luctus gravida. Morbi fermentum mauris sollicitudin scelerisque euismod. Nulla tincidunt suscipit accumsan.\n\nCras eleifend magna et consequat ultrices. Phasellus sodales placerat ullamcorper. Vivamus sed scelerisque augue, a ultricies erat. Aenean felis nibh, aliquam non turpis et, tincidunt commodo tellus. Quisque tellus nisi, congue vitae mi a, ullamcorper luctus nunc. Nulla vel urna tellus. Aliquam non elementum enim. Maecenas volutpat ex ut nibh rhoncus, quis finibus orci venenatis.\n<blockquote>“Etiam nec libero volutpat nisi pellentesque iaculis lobortis ac dui. Duis porta justo metus, eleifend vulputate ipsum volutpat vel.”</blockquote>\nNullam felis leo, tincidunt et facilisis a, gravida non est. In hac habitasse platea dictumst. Suspendisse id laoreet nulla. Nullam sodales convallis pellentesque. Donec sed ipsum eget urna ultrices accumsan nec id dui. Vestibulum egestas, ex eu venenatis feugiat, risus neque congue odio, a suscipit lorem nisl non nunc. Maecenas quis metus et lectus luctus hendrerit. Nunc maximus, enim sed condimentum varius, eros nulla ultricies arcu, non lobortis orci lacus at neque. Nunc pellentesque tincidunt quam, nec gravida neque lacinia vitae. Ut finibus mi eu ante egestas, ut luctus nisl condimentum. Aenean consequat finibus sapien id porttitor.\n\nInteger eu nulla ut purus blandit dapibus ac in quam. Nulla maximus ornare justo, vel luctus metus feugiat sit amet. Pellentesque elit dui, fringilla et sem non, malesuada blandit dui. Quisque sodales mollis elementum.\n\n1. Nam sodales enim nec purus efficitur sodales.\n2. Suspendisse rhoncus viverra scelerisque.\n3. Nam id interdum nisl, non tempor elit.\n4. Suspendisse eget maximus elit. Morbi ut vulputate nisi...\n\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Duis elementum nisl mi, facilisis dignissim ante cursus vitae. Donec tempus elit at ex tempus, in maximus augue rutrum. Cras vitae vehicula elit, posuere lacinia felis. Phasellus ligula nibh, mattis ac lobortis vel, vehicula dignissim tellus. Fusce orci purus, congue ac diam vel, tempor vestibulum nibh. Cras dictum elit a aliquam dictum.\n\nMauris condimentum vehicula erat, vitae dignissim turpis mattis non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor, diam vel bibendum maximus, leo justo ornare lacus, nec tempus velit tortor sit amet risus. Pellentesque erat risus, dictum eu magna in, porttitor aliquam augue. Cras suscipit, turpis sit amet gravida iaculis, libero metus ultricies massa, eu condimentum magna erat nec tellus. Quisque ac finibus ipsum. Maecenas auctor sapien tellus, non auctor libero maximus eget. Phasellus iaculis magna non dignissim pulvinar.', 'Nulla mollis ante vitae dolor blandit mollis eget a lacus.', '', 'publish', 'open', 'open', '', 'nulla-mollis-ante-vitae-dolor-blandit-mollis-eget-lacus-2', '', '', '2017-05-10 14:26:44', '2017-05-10 14:26:44', '', 0, 'https://colorlib.com/newspaper-x/?p=46', 0, 'post', '', 0),
-(142, 2, '2017-04-12 11:41:59', '2017-04-12 11:41:59', 'Welcome to <a href="http://colorlib.com/">colorlib.com</a>. This is your first post. Edit or delete it, then start blogging!', 'Hello world!', '', 'trash', 'open', 'open', '', 'hello-world__trashed', '', '', '2017-04-12 11:41:59', '2017-04-12 11:41:59', '', 0, 'https://colorlib.com/newspaper-x/?p=1', 0, 'post', '', 0),
 (144, 1, '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 'Facebook', '', 'publish', 'closed', 'closed', '', 'facebook-2', '', '', '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 0, 'http://localhost:82/cms_f_12017/wordpress/?p=144', 1, 'nav_menu_item', '', 0),
 (145, 1, '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 'Tumblr', '', 'publish', 'closed', 'closed', '', 'tumblr-2', '', '', '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 0, 'http://localhost:82/cms_f_12017/wordpress/?p=145', 2, 'nav_menu_item', '', 0),
 (146, 1, '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 'Twitter', '', 'publish', 'closed', 'closed', '', 'twitter-2', '', '', '2017-11-13 02:27:56', '2017-11-13 02:27:56', '', 0, 'http://localhost:82/cms_f_12017/wordpress/?p=146', 3, 'nav_menu_item', '', 0),
@@ -1045,7 +1036,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (165, 1, '2017-11-13 03:11:39', '2017-11-13 03:11:39', '', '01_latestnews_article_02-550x360', '', 'inherit', 'open', 'closed', '', '01_latestnews_article_02-550x360', '', '', '2017-11-13 03:11:39', '2017-11-13 03:11:39', '', 0, 'http://localhost:82/cms_f_12017/wp-content/uploads/2017/11/01_latestnews_article_02-550x360.jpg', 0, 'attachment', 'image/jpeg', 0),
 (166, 1, '2017-11-13 03:11:40', '2017-11-13 03:11:40', '', '02_events_article_02-550x360', '', 'inherit', 'open', 'closed', '', '02_events_article_02-550x360', '', '', '2017-11-13 03:11:40', '2017-11-13 03:11:40', '', 0, 'http://localhost:82/cms_f_12017/wp-content/uploads/2017/11/02_events_article_02-550x360.jpg', 0, 'attachment', 'image/jpeg', 0),
 (167, 1, '2017-11-13 03:17:22', '2017-11-13 03:17:22', '{\n    "newspaper-x::newspaper_x_enable_news_ticker": {\n        "value": false,\n        "type": "theme_mod",\n        "user_id": 1\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '0433848d-7ef2-480f-815a-3b0eecf2c1a5', '', '', '2017-11-13 03:17:22', '2017-11-13 03:17:22', '', 0, 'http://localhost:82/cms_f_12017/?p=167', 0, 'customize_changeset', '', 0),
-(168, 1, '2017-11-13 03:19:29', '0000-00-00 00:00:00', '', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-11-13 03:19:29', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/cms_f_12017/?p=168', 1, 'nav_menu_item', '', 0);
+(168, 1, '2017-11-13 03:19:29', '0000-00-00 00:00:00', '', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-11-13 03:19:29', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/cms_f_12017/?p=168', 1, 'nav_menu_item', '', 0),
+(169, 7, '2017-11-13 03:40:52', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-11-13 03:40:52', '0000-00-00 00:00:00', '', 0, 'http://localhost:82/cms_f_12017/?p=169', 0, 'post', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1053,6 +1045,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- Table structure for table `wp_termmeta`
 --
 
+DROP TABLE IF EXISTS `wp_termmeta`;
 CREATE TABLE IF NOT EXISTS `wp_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -1069,6 +1062,7 @@ CREATE TABLE IF NOT EXISTS `wp_termmeta` (
 -- Table structure for table `wp_terms`
 --
 
+DROP TABLE IF EXISTS `wp_terms`;
 CREATE TABLE IF NOT EXISTS `wp_terms` (
   `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -1108,6 +1102,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- Table structure for table `wp_term_relationships`
 --
 
+DROP TABLE IF EXISTS `wp_term_relationships`;
 CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
   `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -1188,7 +1183,6 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (139, 2, 0),
 (140, 16, 0),
 (141, 4, 0),
-(142, 1, 0),
 (144, 17, 0),
 (145, 17, 0),
 (146, 17, 0),
@@ -1210,6 +1204,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- Table structure for table `wp_term_taxonomy`
 --
 
+DROP TABLE IF EXISTS `wp_term_taxonomy`;
 CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -1251,6 +1246,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- Table structure for table `wp_usermeta`
 --
 
+DROP TABLE IF EXISTS `wp_usermeta`;
 CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -1259,7 +1255,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=124 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=145 ;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -1280,7 +1276,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'wp_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '1'),
-(15, 1, 'session_tokens', 'a:4:{s:64:"a54e8b16edf4e4fad9ccc5ab77c6ac3dc589d387e907e8a4dd4b8862a12cc67c";a:4:{s:10:"expiration";i:1510708778;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510535978;}s:64:"724560c27d8ae5fe8a08e689fb61684c56c5e748e1aea3fb6c67f8c54f030f2f";a:4:{s:10:"expiration";i:1510711383;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538583;}s:64:"9b4953de810fd9b50fd0f78cc85871ae3505c5cde4a2a1fddbdbcc22875a7cdb";a:4:{s:10:"expiration";i:1510711428;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538628;}s:64:"8573111758b50449c28bdce007090be174627f51187cdd2745feeccf8186634b";a:4:{s:10:"expiration";i:1510714109;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510541309;}}'),
+(15, 1, 'session_tokens', 'a:3:{s:64:"a54e8b16edf4e4fad9ccc5ab77c6ac3dc589d387e907e8a4dd4b8862a12cc67c";a:4:{s:10:"expiration";i:1510708778;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510535978;}s:64:"724560c27d8ae5fe8a08e689fb61684c56c5e748e1aea3fb6c67f8c54f030f2f";a:4:{s:10:"expiration";i:1510711383;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538583;}s:64:"9b4953de810fd9b50fd0f78cc85871ae3505c5cde4a2a1fddbdbcc22875a7cdb";a:4:{s:10:"expiration";i:1510711428;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538628;}}'),
 (16, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (17, 1, 'twitter', ''),
 (18, 1, 'facebook', ''),
@@ -1329,8 +1325,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (61, 4, 'use_ssl', '0'),
 (62, 4, 'show_admin_bar_front', 'true'),
 (63, 4, 'locale', ''),
-(64, 4, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
-(65, 4, 'wp_user_level', '7'),
+(64, 4, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
+(65, 4, 'wp_user_level', '10'),
 (66, 4, 'dismissed_wp_pointers', ''),
 (67, 5, 'nickname', 'phamphuong'),
 (68, 5, 'first_name', 'Pham'),
@@ -1342,8 +1338,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (74, 5, 'use_ssl', '0'),
 (75, 5, 'show_admin_bar_front', 'true'),
 (76, 5, 'locale', ''),
-(77, 5, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
-(78, 5, 'wp_user_level', '7'),
+(77, 5, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
+(78, 5, 'wp_user_level', '10'),
 (79, 5, 'dismissed_wp_pointers', ''),
 (80, 6, 'nickname', 'nvkhoa'),
 (81, 6, 'first_name', 'Nguyen'),
@@ -1355,8 +1351,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (87, 6, 'use_ssl', '0'),
 (88, 6, 'show_admin_bar_front', 'true'),
 (89, 6, 'locale', ''),
-(90, 6, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
-(91, 6, 'wp_user_level', '7'),
+(90, 6, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
+(91, 6, 'wp_user_level', '10'),
 (92, 6, 'dismissed_wp_pointers', ''),
 (93, 5, 'twitter', ''),
 (94, 5, 'facebook', ''),
@@ -1380,15 +1376,36 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (112, 7, 'use_ssl', '0'),
 (113, 7, 'show_admin_bar_front', 'true'),
 (114, 7, 'locale', ''),
-(115, 7, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
-(116, 7, 'wp_user_level', '7'),
+(115, 7, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
+(116, 7, 'wp_user_level', '10'),
 (117, 7, 'dismissed_wp_pointers', ''),
 (118, 6, 'twitter', ''),
 (119, 6, 'facebook', ''),
 (120, 6, 'github', ''),
 (121, 6, 'youtube', ''),
 (122, 6, 'google-plus', ''),
-(123, 6, 'linkedin', '');
+(123, 6, 'linkedin', ''),
+(124, 8, 'nickname', 'huutai'),
+(125, 8, 'first_name', 'Nguyen'),
+(126, 8, 'last_name', 'Tai'),
+(127, 8, 'description', ''),
+(128, 8, 'rich_editing', 'true'),
+(129, 8, 'comment_shortcuts', 'false'),
+(130, 8, 'admin_color', 'fresh'),
+(131, 8, 'use_ssl', '0'),
+(132, 8, 'show_admin_bar_front', 'true'),
+(133, 8, 'locale', ''),
+(134, 8, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}'),
+(135, 8, 'wp_user_level', '10'),
+(136, 8, 'dismissed_wp_pointers', ''),
+(137, 8, 'twitter', ''),
+(138, 8, 'facebook', ''),
+(139, 8, 'github', ''),
+(140, 8, 'youtube', ''),
+(141, 8, 'google-plus', ''),
+(142, 8, 'linkedin', ''),
+(143, 7, 'session_tokens', 'a:1:{s:64:"e4011b9de8821ad1797890bba3793c2fdae7649bb5cb859254185ee104774e63";a:4:{s:10:"expiration";i:1510717252;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510544452;}}'),
+(144, 7, 'wp_dashboard_quick_press_last_post_id', '169');
 
 -- --------------------------------------------------------
 
@@ -1396,6 +1413,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- Table structure for table `wp_users`
 --
 
+DROP TABLE IF EXISTS `wp_users`;
 CREATE TABLE IF NOT EXISTS `wp_users` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_login` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -1411,7 +1429,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`),
   KEY `user_email` (`user_email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `wp_users`
@@ -1422,7 +1440,8 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 (4, 'trantritin', '$P$BZTGpxciZhanoCorrETP7vOulAx/DD1', 'trantritin', 'makoto180194@gmail.com', '', '2017-11-13 03:26:10', '', 0, 'Tran Tin'),
 (5, 'phamphuong', '$P$BSYFwmizeCNWTV7tRVX/D5JE5glaXP1', 'phamphuong', 'phamphuong0108@gmail.com', '', '2017-11-13 03:26:49', '', 0, 'Pham Phuong'),
 (6, 'nvkhoa', '$P$BoxVH/sJU24rZbA21i7kkxFEjiIN6S0', 'nvkhoa', 'khoanguyen@gmail.com', '', '2017-11-13 03:27:29', '', 0, 'Nguyen Khoa'),
-(7, 'dtphong', '$P$B.KhML2Co0WAp6IBDs6Bp2NxUmgwAz.', 'dtphong', 'shine206273@gmail.com', '', '2017-11-13 03:29:06', '', 0, 'Do Phong');
+(7, 'dtphong', '$P$B.KhML2Co0WAp6IBDs6Bp2NxUmgwAz.', 'dtphong', 'shine206273@gmail.com', '', '2017-11-13 03:29:06', '', 0, 'Do Phong'),
+(8, 'huutai', '$P$Br8aav.HWvh7hv8OK5NwK70GJi6kHa1', 'huutai', 'tainguyen@gmail.com', '', '2017-11-13 03:40:28', '', 0, 'Nguye Tai');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
