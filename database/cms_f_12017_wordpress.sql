@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 04:29 AM
+-- Generation Time: Nov 13, 2017 at 04:32 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -1259,7 +1259,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=118 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=124 ;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -1329,8 +1329,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (61, 4, 'use_ssl', '0'),
 (62, 4, 'show_admin_bar_front', 'true'),
 (63, 4, 'locale', ''),
-(64, 4, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
-(65, 4, 'wp_user_level', '0'),
+(64, 4, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
+(65, 4, 'wp_user_level', '7'),
 (66, 4, 'dismissed_wp_pointers', ''),
 (67, 5, 'nickname', 'phamphuong'),
 (68, 5, 'first_name', 'Pham'),
@@ -1342,8 +1342,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (74, 5, 'use_ssl', '0'),
 (75, 5, 'show_admin_bar_front', 'true'),
 (76, 5, 'locale', ''),
-(77, 5, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
-(78, 5, 'wp_user_level', '0'),
+(77, 5, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
+(78, 5, 'wp_user_level', '7'),
 (79, 5, 'dismissed_wp_pointers', ''),
 (80, 6, 'nickname', 'nvkhoa'),
 (81, 6, 'first_name', 'Nguyen'),
@@ -1355,8 +1355,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (87, 6, 'use_ssl', '0'),
 (88, 6, 'show_admin_bar_front', 'true'),
 (89, 6, 'locale', ''),
-(90, 6, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
-(91, 6, 'wp_user_level', '0'),
+(90, 6, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
+(91, 6, 'wp_user_level', '7'),
 (92, 6, 'dismissed_wp_pointers', ''),
 (93, 5, 'twitter', ''),
 (94, 5, 'facebook', ''),
@@ -1380,9 +1380,15 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (112, 7, 'use_ssl', '0'),
 (113, 7, 'show_admin_bar_front', 'true'),
 (114, 7, 'locale', ''),
-(115, 7, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
-(116, 7, 'wp_user_level', '0'),
-(117, 7, 'dismissed_wp_pointers', '');
+(115, 7, 'wp_capabilities', 'a:1:{s:6:"editor";b:1;}'),
+(116, 7, 'wp_user_level', '7'),
+(117, 7, 'dismissed_wp_pointers', ''),
+(118, 6, 'twitter', ''),
+(119, 6, 'facebook', ''),
+(120, 6, 'github', ''),
+(121, 6, 'youtube', ''),
+(122, 6, 'google-plus', ''),
+(123, 6, 'linkedin', '');
 
 -- --------------------------------------------------------
 
