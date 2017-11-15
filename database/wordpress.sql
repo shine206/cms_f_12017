@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2017 at 04:41 AM
+-- Generation Time: Nov 15, 2017 at 08:56 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -17,8 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `cms_f_12017_wordpress`
+-- Database: `wordpress`
 --
+CREATE DATABASE IF NOT EXISTS `wordpress` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `wordpress`;
 
 -- --------------------------------------------------------
 
@@ -114,15 +116,15 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=219 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=225 ;
 
 --
 -- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost:82/cms_f_12017', 'yes'),
-(2, 'home', 'http://localhost:82/cms_f_12017', 'yes'),
+(1, 'siteurl', 'http://localhost:82/wordpress', 'yes'),
+(2, 'home', 'http://localhost:82/wordpress', 'yes'),
 (3, 'blogname', 'Nhom F', 'yes'),
 (4, 'blogdescription', 'Just another WordPress site', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
@@ -228,13 +230,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (105, 'widget_tag_cloud', 'a:2:{i:1;a:2:{s:5:"title";s:4:"Tags";s:8:"taxonomy";s:8:"post_tag";}s:12:"_multiwidget";i:1;}', 'yes'),
 (106, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(108, 'cron', 'a:8:{i:1510546951;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"686c8315be36c96dc00d0d7ed3656b43";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:6;}}}}i:1510547000;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"d63aca0b7e6237c7964320bd7fc95644";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:7;}}}}i:1510587439;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510587440;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510626250;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"60fda3b54003017dc64a0c492471bbfe";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:8;}}}}i:1510626309;a:1:{s:26:"importer_scheduled_cleanup";a:1:{s:32:"d93d189209760683feef7c8d0b42e0ef";a:2:{s:8:"schedule";b:0;s:4:"args";a:1:{i:0;i:143;}}}}i:1510630656;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(108, 'cron', 'a:4:{i:1510760239;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510760240;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510803456;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (109, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1510536139;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
-(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1510544284;}', 'no'),
-(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510544284;}', 'no'),
+(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1510727822;}', 'no'),
+(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510727822;}', 'no'),
 (119, 'can_compress_scripts', '1', 'no'),
-(126, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1510579184', 'no'),
-(127, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no'),
 (128, '_site_transient_timeout_wporg_theme_feature_list', '1510546905', 'no'),
 (129, '_site_transient_wporg_theme_feature_list', 'a:0:{}', 'no'),
 (130, 'widget_newspaper_x_widget_posts_a', 'a:2:{i:1;a:6:{s:5:"title";s:4:"News";s:20:"newspaper_x_category";s:4:"news";s:9:"show_post";i:12;s:9:"show_date";s:2:"on";s:5:"order";s:4:"desc";s:6:"offset";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
@@ -253,7 +253,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (176, '_transient_timeout_plugin_slugs', '1510626202', 'no'),
 (177, '_transient_plugin_slugs', 'a:4:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";i:2;s:53:"widget-importer-exporter/widget-importer-exporter.php";i:3;s:41:"wordpress-importer/wordpress-importer.php";}', 'no'),
 (178, 'recently_activated', 'a:0:{}', 'yes'),
-(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510544284;}', 'no'),
+(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510727822;}', 'no'),
 (184, 'newspaper_x_importer_finished', '1', 'yes'),
 (186, 'category_children', 'a:0:{}', 'yes'),
 (190, '_transient_timeout_epsilon_plugin_information_transient_kiwi-social-share', '1510543965', 'no'),
@@ -273,8 +273,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (213, '_transient_newspaper_x_plugin_information_transient_fancybox-for-wordpress', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (214, '_transient_timeout_newspaper_x_plugin_information_transient_simple-custom-post-order', '1510545162', 'no'),
 (215, '_transient_newspaper_x_plugin_information_transient_simple-custom-post-order', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
-(217, '_site_transient_timeout_theme_roots', '1510546084', 'no'),
-(218, '_site_transient_theme_roots', 'a:4:{s:11:"newspaper-x";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no');
+(220, '_transient_is_multi_author', '1', 'yes'),
+(221, '_site_transient_timeout_theme_roots', '1510729622', 'no'),
+(222, '_site_transient_theme_roots', 'a:4:{s:11:"newspaper-x";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(223, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1510775236', 'no'),
+(224, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no');
 
 -- --------------------------------------------------------
 
@@ -1255,7 +1258,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=145 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=146 ;
 
 --
 -- Dumping data for table `wp_usermeta`
@@ -1276,7 +1279,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'wp_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '1'),
-(15, 1, 'session_tokens', 'a:3:{s:64:"a54e8b16edf4e4fad9ccc5ab77c6ac3dc589d387e907e8a4dd4b8862a12cc67c";a:4:{s:10:"expiration";i:1510708778;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510535978;}s:64:"724560c27d8ae5fe8a08e689fb61684c56c5e748e1aea3fb6c67f8c54f030f2f";a:4:{s:10:"expiration";i:1510711383;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538583;}s:64:"9b4953de810fd9b50fd0f78cc85871ae3505c5cde4a2a1fddbdbcc22875a7cdb";a:4:{s:10:"expiration";i:1510711428;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510538628;}}'),
+(15, 1, 'session_tokens', 'a:2:{s:64:"c38dd6ac7d0a6d37bd7c5dc127fbdebe702a79b77e7b52ec39010232d8843704";a:4:{s:10:"expiration";i:1510905135;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510732335;}s:64:"c179e86991dc77c4bd878140060ac7faf0a84bb15d72d9e509c3ea7a0acecfc0";a:4:{s:10:"expiration";i:1510905312;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510732512;}}'),
 (16, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (17, 1, 'twitter', ''),
 (18, 1, 'facebook', ''),
@@ -1312,8 +1315,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (48, 3, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}'),
 (49, 3, 'wp_user_level', '0'),
 (50, 3, 'dismissed_wp_pointers', ''),
-(51, 1, 'wp_user-settings', 'libraryContent=browse&widgets_access=off'),
-(52, 1, 'wp_user-settings-time', '1510543345'),
+(51, 1, 'wp_user-settings', 'libraryContent=browse&widgets_access=off&posts_list_mode=list'),
+(52, 1, 'wp_user-settings-time', '1510732098'),
 (53, 1, 'nav_menu_recently_edited', '2'),
 (54, 4, 'nickname', 'trantritin'),
 (55, 4, 'first_name', 'Tran'),
@@ -1405,7 +1408,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (141, 8, 'google-plus', ''),
 (142, 8, 'linkedin', ''),
 (143, 7, 'session_tokens', 'a:1:{s:64:"e4011b9de8821ad1797890bba3793c2fdae7649bb5cb859254185ee104774e63";a:4:{s:10:"expiration";i:1510717252;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510544452;}}'),
-(144, 7, 'wp_dashboard_quick_press_last_post_id', '169');
+(144, 7, 'wp_dashboard_quick_press_last_post_id', '169'),
+(145, 1, 'edit_post_per_page', '20');
 
 -- --------------------------------------------------------
 
