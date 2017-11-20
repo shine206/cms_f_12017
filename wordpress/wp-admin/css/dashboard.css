@@ -271,7 +271,7 @@
 
 #dashboard_right_now li a:before,
 #dashboard_right_now li > span:before { /* get only the first level span to exclude screen-reader-text in mu-storage */
-	content: "\f159"; /* generic icon for items added by CPTs ? */
+	content: "\f110"; /* generic icon for items added by CPTs ? */
 	padding: 0 5px 0 0;
 }
 
@@ -287,6 +287,11 @@
 
 #dashboard_right_now .comment-count a:before {
 	content: "\f101";
+}
+
+#dashboard_right_now .user-count a:before,
+#dashboard_right_now .user-count span:before {
+	content: "\f110";
 }
 
 #dashboard_right_now .comment-mod-count a:before {

@@ -290,6 +290,17 @@ function wp_dashboard_right_now() {
 		<?php
 	}
 
+	//Users
+	$num_users = count_users();
+	if ($num_users) {
+		$text = $num_users["total_users"] . ' User';
+		if ($num_users > 1) {
+			$text = $num_users["total_users"] . ' Users';
+		}
+		
+		print('<li class="user-count"><a href="users.php">' . $text . '</a></li>');
+	}
+
 	/**
 	 * Filters the array of extra elements to list in the 'At a Glance'
 	 * dashboard widget.
