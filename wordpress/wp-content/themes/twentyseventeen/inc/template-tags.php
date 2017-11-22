@@ -158,7 +158,6 @@ function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
  */
 function twentyseventeen_categorized_blog() {
 	$category_count = get_transient( 'twentyseventeen_categories' );
-
 	if ( false === $category_count ) {
 		// Create an array of all the categories that are attached to posts.
 		$categories = get_categories( array(
@@ -170,7 +169,6 @@ function twentyseventeen_categorized_blog() {
 
 		// Count the number of categories that are attached to the posts.
 		$category_count = count( $categories );
-
 		set_transient( 'twentyseventeen_categories', $category_count );
 	}
 

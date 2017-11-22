@@ -804,7 +804,21 @@ class WP_Term_Query {
 			if ( $offset >= count( $terms ) ) {
 				$terms = array();
 			} else {
+				
 				$terms = array_slice( $terms, $offset, $number, true );
+				// if ($args['taxonomy'][0] == 'category') {
+				// 	$count = 0;
+				// 	foreach ($terms as $term) {
+				// 		var_dump($term);
+				// 		if ($term->parent == '0') {
+				// 			$terms[$count] = $term;
+				// 			$count++;
+				// 		}
+				// 	}
+
+				// }
+				
+				
 			}
 		}
 

@@ -499,7 +499,7 @@ function wp_dropdown_categories( $args = '' ) {
  * }
  * @return false|string HTML content only if 'echo' argument is 0.
  */
-function wp_list_categories( $args = '' ) {
+function wp_list_categories( $args = '') {
 	$defaults = array(
 		'child_of'            => 0,
 		'current_category'    => 0,
@@ -510,7 +510,7 @@ function wp_list_categories( $args = '' ) {
 		'feed'                => '',
 		'feed_image'          => '',
 		'feed_type'           => '',
-		'hide_empty'          => 1,
+		'hide_empty'          => 0,
 		'hide_title_if_empty' => false,
 		'hierarchical'        => true,
 		'order'               => 'ASC',
@@ -523,6 +523,8 @@ function wp_list_categories( $args = '' ) {
 		'taxonomy'            => 'category',
 		'title_li'            => __( 'Categories' ),
 		'use_desc_for_title'  => 1,
+		// 'offset'=> 3,
+		'number'=> 3,
 	);
 
 	$r = wp_parse_args( $args, $defaults );
@@ -557,7 +559,6 @@ function wp_list_categories( $args = '' ) {
 	$show_option_none = $r['show_option_none'];
 
 	$categories = get_categories( $r );
-
 	$output = '';
 	if ( $r['title_li'] && 'list' == $r['style'] && ( ! empty( $categories ) || ! $r['hide_title_if_empty'] ) ) {
 		$output = '<li class="' . esc_attr( $r['class'] ) . '">' . $r['title_li'] . '<ul>';
@@ -624,6 +625,7 @@ function wp_list_categories( $args = '' ) {
 	if ( $r['title_li'] && 'list' == $r['style'] && ( ! empty( $categories ) || ! $r['hide_title_if_empty'] ) ) {
 		$output .= '</ul></li>';
 	}
+	
 
 	/**
 	 * Filters the HTML output of a taxonomy list.
@@ -634,7 +636,6 @@ function wp_list_categories( $args = '' ) {
 	 * @param array  $args   An array of taxonomy-listing arguments.
 	 */
 	$html = apply_filters( 'wp_list_categories', $output, $args );
-
 	if ( $r['echo'] ) {
 		echo $html;
 	} else {
