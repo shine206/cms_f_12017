@@ -392,6 +392,9 @@ function wp_default_scripts( &$scripts ) {
 	$scripts->add( 'wp-playlist', "/wp-includes/js/mediaelement/wp-playlist$suffix.js", array( 'wp-util', 'backbone', 'mediaelement' ), false, 1 );
 
 	$scripts->add( 'zxcvbn-async', "/wp-includes/js/zxcvbn-async$suffix.js", array(), '1.0' );
+	$scripts->add( 'bootstrap', "/wp-includes/js/bootstrap$suffix.js", array(), '3.3.7' );
+	$scripts->add( 'jQuery2x', "/wp-includes/js/jquery-2.2.4.js", array(), '2.2.4' );
+	$scripts->add( 'jQuery1x', "/wp-includes/js/jquery-1.12.4.js", array(), '1.12.4' );
 	did_action( 'init' ) && $scripts->localize( 'zxcvbn-async', '_zxcvbnSettings', array(
 		'src' => empty( $guessed_url ) ? includes_url( '/js/zxcvbn.min.js' ) : $scripts->base_url . '/wp-includes/js/zxcvbn.min.js',
 	) );
@@ -867,7 +870,8 @@ function wp_default_styles( &$styles ) {
 	$styles->add( 'dashicons', "/wp-includes/css/dashicons$suffix.css" );
 
 	// Includes CSS
-	$styles->add( 'admin-bar',            "/wp-includes/css/admin-bar$suffix.css", array( 'dashicons' ) );
+	$styles->add( 'admin-bar',            "/wp-includes/css/admin-bar$suffisx.css", array( 'dashicons' ) );
+	$styles->add( 'bootstrap',            "/wp-includes/css/bootstrap$suffix.css", array( 'phong' ) );
 	$styles->add( 'wp-auth-check',        "/wp-includes/css/wp-auth-check$suffix.css", array( 'dashicons' ) );
 	$styles->add( 'editor-buttons',       "/wp-includes/css/editor$suffix.css", array( 'dashicons' ) );
 	$styles->add( 'media-views',          "/wp-includes/css/media-views$suffix.css", array( 'buttons', 'dashicons', 'wp-mediaelement' ) );
@@ -1313,7 +1317,6 @@ function print_admin_styles() {
 	global $concatenate_scripts;
 
 	$wp_styles = wp_styles();
-
 	script_concat_settings();
 	$wp_styles->do_concat = $concatenate_scripts;
 	$wp_styles->do_items(false);

@@ -354,7 +354,6 @@ class WP_Scripts extends WP_Dependencies {
 		 * @param string $src    The script's source URL.
 		 */
 		$tag = apply_filters( 'script_loader_tag', $tag, $handle, $src );
-
 		if ( $this->do_concat ) {
 			$this->print_html .= $tag;
 		} else {

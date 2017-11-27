@@ -20,6 +20,12 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<?php 
+	wp_enqueue_style( 'bootstrap-3', get_template_directory_uri() . '/assets/css/bootstrap-3.3.7.min.css'); 
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/843.css'); 
+	wp_enqueue_script( 'jquery-2', get_template_directory_uri() . '/assets/js/jquery-2.2.4.js');
+	wp_enqueue_script( 'jquery-1', get_template_directory_uri() . '/assets/js/jquery-1.12.4.js');
+?>
 </head>
 
 <body <?php body_class(); ?>>

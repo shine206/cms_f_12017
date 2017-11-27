@@ -325,20 +325,20 @@ function twentyseventeen_widgets_init() {
 		'name'          => __( 'Footer 1', 'twentyseventeen' ),
 		'id'            => 'sidebar-2',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="custom">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="title"><h6></h6>',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Footer 2', 'twentyseventeen' ),
 		'id'            => 'sidebar-3',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="custom">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="title"><h6></h6>',
+		'after_title'   => '</div>',
 	) );
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );

@@ -60,7 +60,6 @@ function wp_print_styles( $handles = false ) {
 			return array(); // No need to instantiate if nothing is there.
 		}
 	}
-
 	return wp_styles()->do_items( $handles );
 }
 

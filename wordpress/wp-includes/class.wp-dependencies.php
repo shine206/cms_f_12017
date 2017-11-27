@@ -117,7 +117,6 @@ class WP_Dependencies {
 				unset( $this->to_do[$key] );
 			}
 		}
-
 		return $this->done;
 	}
 

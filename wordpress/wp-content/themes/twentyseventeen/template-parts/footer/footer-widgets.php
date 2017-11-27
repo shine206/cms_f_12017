@@ -14,19 +14,33 @@
 if ( is_active_sidebar( 'sidebar-2' ) ||
 	 is_active_sidebar( 'sidebar-3' ) ) :
 ?>
-
-	<aside class="widget-area" role="complementary">
+	
 		<?php
 		if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-			<div class="widget-column footer-widget-1">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-			</div>
+			<div class="columns col-md-3 col-sm-3 col-xs-12">
+	                        
+	                    
+			<div class="title">
+                <h6>RECENT POST</h6>
+            </div>
+            <div class="list">
+                <ul>
+                <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                </ul>
+            </div>
+            </div>
 		<?php }
 		if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-			<div class="widget-column footer-widget-2">
-				<?php dynamic_sidebar( 'sidebar-3' ); ?>
-			</div>
+			<div class="columns col-md-3 col-sm-3 col-xs-12">
+			<div class="title">
+                <h6>COMMENTS</h6>
+            </div>
+            <div class="list">
+                <ul>
+                <?php dynamic_sidebar( 'sidebar-3' ); ?>
+                </ul>
+            </div>
+            </div>
 		<?php } ?>
-	</aside><!-- .widget-area -->
 
 <?php endif; ?>
