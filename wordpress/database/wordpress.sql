@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2017 at 08:56 AM
+-- Generation Time: Nov 29, 2017 at 06:54 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -116,15 +116,15 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=225 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci AUTO_INCREMENT=234 ;
 
 --
 -- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost:82/wordpress', 'yes'),
-(2, 'home', 'http://localhost:82/wordpress', 'yes'),
+(1, 'siteurl', 'http://localhost:82/cms_f_12017/wordpress', 'yes'),
+(2, 'home', 'http://localhost:82/cms_f_12017/wordpress', 'yes'),
 (3, 'blogname', 'Nhom F', 'yes'),
 (4, 'blogdescription', 'Just another WordPress site', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
@@ -162,8 +162,8 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (37, 'gmt_offset', '0', 'yes'),
 (38, 'default_email_category', '1', 'yes'),
 (39, 'recently_edited', '', 'no'),
-(40, 'template', 'newspaper-x', 'yes'),
-(41, 'stylesheet', 'newspaper-x', 'yes'),
+(40, 'template', 'twentysixteen', 'yes'),
+(41, 'stylesheet', 'twentysixteen', 'yes'),
 (42, 'comment_whitelist', '1', 'yes'),
 (43, 'blacklist_keys', '', 'no'),
 (44, 'comment_registration', '0', 'yes'),
@@ -221,7 +221,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (96, 'widget_recent-comments', 'a:2:{i:2;a:2:{s:5:"title";s:0:"";s:6:"number";i:5;}s:12:"_multiwidget";i:1;}', 'yes'),
 (97, 'widget_archives', 'a:3:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}i:3;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (98, 'widget_meta', 'a:3:{i:2;a:1:{s:5:"title";s:0:"";}i:3;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
-(99, 'sidebars_widgets', 'a:13:{s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:19:"wp_inactive_widgets";a:5:{i:0;s:8:"search-3";i:1;s:14:"recent-posts-3";i:2;s:10:"archives-3";i:3;s:12:"categories-3";i:4;s:6:"meta-3";}s:7:"sidebar";a:3:{i:0;s:8:"search-4";i:1;s:12:"categories-4";i:2;s:11:"tag_cloud-1";}s:18:"header-widget-area";a:1:{i:0;s:27:"newspaper_x_header_module-1";}s:12:"content-area";a:6:{i:0;s:28:"newspaper_x_widget_posts_a-1";i:1;s:20:"newspaper_x_banner-1";i:2;s:28:"newspaper_x_widget_posts_c-1";i:3;s:20:"newspaper_x_banner-2";i:4;s:28:"newspaper_x_widget_posts_b-1";i:5;s:28:"newspaper_x_widget_posts_d-1";}s:18:"after-content-area";a:4:{i:0;s:20:"newspaper_x_banner-3";i:1;s:28:"newspaper_x_widget_posts_b-2";i:2;s:28:"newspaper_x_widget_posts_b-3";i:3;s:28:"newspaper_x_widget_posts_d-2";}s:16:"sidebar-homepage";a:0:{}s:8:"footer-1";a:1:{i:0;s:6:"text-2";}s:8:"footer-2";a:1:{i:0;s:14:"recent-posts-4";}s:8:"footer-3";a:1:{i:0;s:12:"categories-5";}s:8:"footer-4";a:1:{i:0;s:31:"newspaper_x_widget_contact_us-1";}s:12:"after-footer";a:0:{}s:13:"array_version";i:3;}', 'yes'),
+(99, 'sidebars_widgets', 'a:5:{s:19:"wp_inactive_widgets";a:10:{i:0;s:10:"archives-3";i:1;s:6:"meta-3";i:2;s:8:"search-3";i:3;s:8:"search-4";i:4;s:6:"text-2";i:5;s:12:"categories-3";i:6;s:12:"categories-4";i:7;s:12:"categories-5";i:8;s:14:"recent-posts-3";i:9;s:14:"recent-posts-4";}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}s:13:"array_version";i:3;}', 'yes'),
 (100, 'widget_pages', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_media_audio', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
@@ -230,10 +230,10 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (105, 'widget_tag_cloud', 'a:2:{i:1;a:2:{s:5:"title";s:4:"Tags";s:8:"taxonomy";s:8:"post_tag";}s:12:"_multiwidget";i:1;}', 'yes'),
 (106, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(108, 'cron', 'a:4:{i:1510760239;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510760240;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1510803456;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(109, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1510536139;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
-(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1510727822;}', 'no'),
-(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510727822;}', 'no'),
+(108, 'cron', 'a:4:{i:1511969839;a:1:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1511969840;a:2:{s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1512013056;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(109, 'theme_mods_twentyseventeen', 'a:3:{s:18:"custom_css_post_id";i:-1;s:18:"nav_menu_locations";a:3:{s:7:"primary";i:2;s:11:"footer-menu";i:2;s:6:"social";i:2;}s:16:"sidebars_widgets";a:2:{s:4:"time";i:1511934855;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:10:{i:0;s:10:"archives-3";i:1;s:6:"meta-3";i:2;s:8:"search-3";i:3;s:8:"search-4";i:4;s:6:"text-2";i:5;s:12:"categories-3";i:6;s:12:"categories-4";i:7;s:12:"categories-5";i:8;s:14:"recent-posts-3";i:9;s:14:"recent-posts-4";}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
+(113, '_site_transient_update_core', 'O:8:"stdClass":3:{s:7:"updates";a:0:{}s:15:"version_checked";s:5:"4.8.3";s:12:"last_checked";i:1511934784;}', 'no'),
+(117, '_site_transient_update_themes', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511934855;}', 'no'),
 (119, 'can_compress_scripts', '1', 'no'),
 (128, '_site_transient_timeout_wporg_theme_feature_list', '1510546905', 'no'),
 (129, '_site_transient_wporg_theme_feature_list', 'a:0:{}', 'no'),
@@ -245,7 +245,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (135, 'widget_newspaper_x_widget_contact_us', 'a:2:{i:1;a:5:{s:5:"title";s:7:"Contact";s:5:"phone";s:11:"228 135 887";s:5:"email";s:22:"newspaperx@contact.com";s:7:"address";s:24:"Northon Street, 2015 NYC";s:11:"social_menu";s:1:"6";}s:12:"_multiwidget";i:1;}', 'yes'),
 (136, 'widget_newspaper_x_header_module', 'a:2:{i:1;a:4:{s:5:"title";s:0:"";s:8:"category";s:9:"editorial";s:5:"order";s:4:"desc";s:8:"order_by";s:4:"date";}s:12:"_multiwidget";i:1;}', 'yes'),
 (147, 'theme_mods_newspaper-x', 'a:3:{s:18:"custom_css_post_id";i:-1;s:18:"nav_menu_locations";a:3:{s:7:"primary";i:2;s:11:"footer-menu";i:2;s:6:"social";i:2;}s:30:"newspaper_x_enable_news_ticker";b:0;}', 'yes'),
-(148, 'current_theme', 'Newspaper X', 'yes'),
+(148, 'current_theme', 'Twenty Sixteen', 'yes'),
 (149, 'theme_switched', '', 'yes'),
 (150, 'theme_switched_via_customizer', '', 'yes'),
 (151, 'customize_stashed_theme_mods', 'a:0:{}', 'no'),
@@ -253,7 +253,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (176, '_transient_timeout_plugin_slugs', '1510626202', 'no'),
 (177, '_transient_plugin_slugs', 'a:4:{i:0;s:19:"akismet/akismet.php";i:1;s:9:"hello.php";i:2;s:53:"widget-importer-exporter/widget-importer-exporter.php";i:3;s:41:"wordpress-importer/wordpress-importer.php";}', 'no'),
 (178, 'recently_activated', 'a:0:{}', 'yes'),
-(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1510727822;}', 'no'),
+(182, '_site_transient_update_plugins', 'O:8:"stdClass":1:{s:12:"last_checked";i:1511934784;}', 'no'),
 (184, 'newspaper_x_importer_finished', '1', 'yes'),
 (186, 'category_children', 'a:0:{}', 'yes'),
 (190, '_transient_timeout_epsilon_plugin_information_transient_kiwi-social-share', '1510543965', 'no'),
@@ -274,10 +274,14 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (214, '_transient_timeout_newspaper_x_plugin_information_transient_simple-custom-post-order', '1510545162', 'no'),
 (215, '_transient_newspaper_x_plugin_information_transient_simple-custom-post-order', 'O:8:"WP_Error":2:{s:6:"errors";a:1:{s:18:"plugins_api_failed";a:1:{i:0;s:219:"An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>.";}}s:10:"error_data";a:1:{s:18:"plugins_api_failed";s:55:"cURL error 6: Could not resolve host: api.wordpress.org";}}', 'no'),
 (220, '_transient_is_multi_author', '1', 'yes'),
-(221, '_site_transient_timeout_theme_roots', '1510729622', 'no'),
-(222, '_site_transient_theme_roots', 'a:4:{s:11:"newspaper-x";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
-(223, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1510775236', 'no'),
-(224, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no');
+(226, '_site_transient_timeout_theme_roots', '1511936584', 'no'),
+(227, '_site_transient_theme_roots', 'a:3:{s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(228, '_transient_timeout_dash_v2_88ae138922fe95674369b1cb3d215a2b', '1511978002', 'no'),
+(229, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: wordpress.org</p></div><div class="rss-widget"><p><strong>RSS Error:</strong> WP HTTP Error: cURL error 6: Could not resolve host: planet.wordpress.org</p></div>', 'no'),
+(230, 'theme_mods_twentyfifteen', 'a:4:{i:0;b:0;s:18:"nav_menu_locations";a:3:{s:7:"primary";i:2;s:11:"footer-menu";i:2;s:6:"social";i:2;}s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1511934835;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:10:{i:0;s:10:"archives-3";i:1;s:6:"meta-3";i:2;s:8:"search-3";i:3;s:8:"search-4";i:4;s:6:"text-2";i:5;s:12:"categories-3";i:6;s:12:"categories-4";i:7;s:12:"categories-5";i:8;s:14:"recent-posts-3";i:9;s:14:"recent-posts-4";}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
+(231, '_transient_twentyfifteen_categories', '2', 'yes'),
+(232, 'theme_mods_twentysixteen', 'a:3:{i:0;b:0;s:18:"nav_menu_locations";a:3:{s:7:"primary";i:2;s:11:"footer-menu";i:2;s:6:"social";i:2;}s:18:"custom_css_post_id";i:-1;}', 'yes'),
+(233, '_transient_twentysixteen_categories', '2', 'yes');
 
 -- --------------------------------------------------------
 
@@ -1279,7 +1283,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'wp_user_level', '10'),
 (13, 1, 'dismissed_wp_pointers', ''),
 (14, 1, 'show_welcome_panel', '1'),
-(15, 1, 'session_tokens', 'a:2:{s:64:"c38dd6ac7d0a6d37bd7c5dc127fbdebe702a79b77e7b52ec39010232d8843704";a:4:{s:10:"expiration";i:1510905135;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510732335;}s:64:"c179e86991dc77c4bd878140060ac7faf0a84bb15d72d9e509c3ea7a0acecfc0";a:4:{s:10:"expiration";i:1510905312;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1510732512;}}'),
+(15, 1, 'session_tokens', 'a:1:{s:64:"c427b8f4c5cec32f14d205a67156e920592610f7edd5edef2369d36dfab0dfb2";a:4:{s:10:"expiration";i:1512107596;s:2:"ip";s:3:"::1";s:2:"ua";s:113:"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";s:5:"login";i:1511934796;}}'),
 (16, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (17, 1, 'twitter', ''),
 (18, 1, 'facebook', ''),
