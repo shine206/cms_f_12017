@@ -43,34 +43,9 @@
 	                        </div>
 	                    </div>
 	                    <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-	                    <!-- BEGIN COLUMNS -->
-	                    <!-- <div class="columns col-md-3 col-sm-3 col-xs-12">
-	                        <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-	                    </div> -->
-	                    <!-- END COLUMNS -->
-	                    <!-- BEGIN COLUMNS -->
-	                    <!-- <div class="columns col-md-3 col-sm-3 col-xs-12">
-	                        
-	                    </div> -->
-	                    <!-- END COLUMNS -->
-	                    <!-- BEGIN COLUMNS -->
-	                    <div class="columns col-md-3 col-sm-3 col-xs-12">
-	                        <div class="title">
-	                            <h6>CATEGORIES</h6>
-	                        </div>
-	                        <div class="list">
-	                            <ul>
-	                                <?php 
-	                                	$arrays = get_categories();
-	                                	foreach ($arrays as $cat) {
-	                                		echo '<li><a href="'. get_category_link($cat->term_id) .'">'. $cat->name .'</a></li>';
-	                                	}
-	                                 ?>
-	                            </ul>
-	                        </div>
-	                    </div>
-
-	                    <!-- END COLUMNS -->
+                        <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
+                        <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
+	                   
 	                </div>
 	            </div>
 	            <div class="container">

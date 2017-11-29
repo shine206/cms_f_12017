@@ -523,8 +523,6 @@ function wp_list_categories( $args = '') {
 		'taxonomy'            => 'category',
 		'title_li'            => __( 'Categories' ),
 		'use_desc_for_title'  => 1,
-		// 'offset'=> 3,
-		'number'=> 3,
 	);
 
 	$r = wp_parse_args( $args, $defaults );
@@ -1032,9 +1030,35 @@ function walk_category_tree() {
 	// the user's options are the third parameter
 	if ( empty( $args[2]['walker'] ) || ! ( $args[2]['walker'] instanceof Walker ) ) {
 		$walker = new Walker_Category;
+
 	} else {
 		$walker = $args[2]['walker'];
 	}
+	$categories = [];
+	$count = 0;
+	foreach ($args[0] as $cat) {
+		if ($cat->parent == 0) {
+			$categories[] = $cat;
+			$count++;
+			if ($count >= 3) {
+				break;
+			}
+		}
+	}
+
+	foreach ($categories as $category) {
+		$count = 0;
+		foreach ($args[0] as $cat) {
+			if ($cat->parent == $category->term_id) {
+				$categories[] = $cat;
+				$count++;
+				if ($count >= 3) {
+					break;
+				}
+			}
+		}
+	}
+	$args[0] = $categories;
 	return call_user_func_array( array( $walker, 'walk' ), $args );
 }
 

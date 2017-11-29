@@ -340,6 +340,16 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<div class="title"><h6></h6>',
 		'after_title'   => '</div>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 3', 'twentyseventeen' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'before_widget' => '<section id="%1$s" class="custom">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="title"><h6></h6>',
+		'after_title'   => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 
