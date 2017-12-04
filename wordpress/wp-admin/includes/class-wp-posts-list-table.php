@@ -954,8 +954,13 @@ class WP_Posts_List_Table extends WP_List_Table {
 			echo ' | ' . $post_type_object->labels->parent_item_colon . ' ' . esc_html( $parent_name );
 		}
 		echo "</strong>\n";
-
-		if ( ! is_post_type_hierarchical( $this->screen->post_type ) && 'excerpt' === $mode && current_user_can( 'read_post', $post->ID ) ) {
+//                Phong comments code below
+//              var_dump(is_post_type_hierarchical( $this->screen->post_type ));
+//		if ( ! is_post_type_hierarchical( $this->screen->post_type ) && 'excerpt' === $mode && current_user_can( 'read_post', $post->ID ) ) {
+//			echo esc_html( get_the_excerpt() );
+//		}
+                
+                if ('excerpt' === $mode && current_user_can( 'read_post', $post->ID ) ) {
 			echo esc_html( get_the_excerpt() );
 		}
 

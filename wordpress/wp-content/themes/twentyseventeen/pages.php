@@ -13,9 +13,9 @@
 			<?php 
 				$args = array(
 					'sort_order' => 'asc',
-					'sort_column' => 'post_title'
+					'sort_column' => 'ID'
 				); 
-				$pages = get_pages();
+				$pages = get_pages($args);
 				foreach ($pages as $page) { ?>
 				
 				<div class="col-md-6">
